@@ -1,0 +1,17 @@
+{
+  "name": "@umk-stat/statistic-client-modals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build-package": "umk-build",
+    "build-package:watch": "umk-build --watch",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint --fix ./src --ext .js,.jsx,.ts,.tsx"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@umk-stat/statistic-client-relay": "^1.0.0"
+  }
+}
