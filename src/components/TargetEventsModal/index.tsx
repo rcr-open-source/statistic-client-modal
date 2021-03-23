@@ -63,7 +63,11 @@ export function TargetEventsModal({ target, ...overProps }: TargetEventsModalPro
               ]}
             />
           )
-          : <Label>Событий для этой цели не назначено</Label>}
+          : (
+            <Label styles={{ root: { margin: '10px' } }}>
+              Событий для этой цели не назначено
+            </Label>
+          )}
       </Modal>
     </>
   );
