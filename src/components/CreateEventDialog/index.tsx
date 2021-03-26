@@ -54,7 +54,7 @@ export function CreateEventDialog({ targetId, ...overProps }: CreateEventDialogP
           alert(`Новое событие ${response.createEvent.name} добавлено`);
         },
         onError: (error: any) => {
-          alert(error);
+          alert('Такое имя уже существует');
         },
       },
       targetId,
