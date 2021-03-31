@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import {
   EventsFragmentTypes,
   useEventsFragment,
-  useViewerEventEventssQuery,
+  useEventSubscriptionSubscription,
 } from '@umk-stat/statistic-client-relay';
 
 import {
@@ -32,7 +32,11 @@ export function TargetEventsModal({
   };
 
   const { events } = useEventsFragment(target);
-  const { viewerEventEventss } = useViewerEventEventssQuery({ fetchPolicy: 'store-and-network' }, {});
+  useEventSubscriptionSubscription({
+    variables: {
+      targetID: targetId,
+    },
+  });
 
   const modalProps: IModalProps = {
     dragOptions,
@@ -160,7 +164,7 @@ export function TargetEventsModal({
                     maxWidth: 300,
                     data: 'string',
                     onRender: (item: EventsFragmentTypes.EventsFragment['events'][0]) => (
-                      <span>{viewerEventEventss.filter((vee) => vee.event.name === item.name).length}</span>
+                      <span>{item.executionCount}</span>
                     ),
                   },
                   {

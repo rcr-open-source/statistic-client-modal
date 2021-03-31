@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@umk-stat/statistic-client-relay": "^1.0.0"
+    "@umk-stat/statistic-client-relay": "1.0.0"
   }
 }
