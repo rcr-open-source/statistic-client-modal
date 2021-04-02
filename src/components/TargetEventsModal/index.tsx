@@ -30,13 +30,13 @@ export function TargetEventsModal({
     closeMenuItemText: 'Close',
     menu: ContextualMenu,
   };
-
-  const { events } = useEventsFragment(target);
   useEventSubscriptionSubscription({
     variables: {
       targetID: targetId,
     },
   });
+
+  const { events } = useEventsFragment(target);
 
   const modalProps: IModalProps = {
     dragOptions,
@@ -164,7 +164,7 @@ export function TargetEventsModal({
                     maxWidth: 300,
                     data: 'string',
                     onRender: (item: EventsFragmentTypes.EventsFragment['events'][0]) => (
-                      <span>{item.executionCount}</span>
+                      <span>{item.viewerIds.length}</span>
                     ),
                   },
                   {
